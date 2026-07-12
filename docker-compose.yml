@@ -1,7 +1,6 @@
 services:
   dashboard:
-    build: .
-    image: homelsp:latest
+    image: ghcr.io/davnpsh/homelsp:latest
     container_name: dashboard
     ports:
       - "8000:8000"

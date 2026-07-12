@@ -1,0 +1,17 @@
+services:
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: homelsp-dev
+    container_name: dashboard-dev
+    command: deno run --watch --allow-net --allow-read --allow-env main.ts
+    environment:
+      PORT: "8000"
+      CONFIG_PATH: /app/config.example.yaml
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    user: "0:0"
+    restart: unless-stopped

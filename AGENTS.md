@@ -27,11 +27,14 @@ checking — the backend simply renders whatever you put in a YAML config file.
 
 ## Running
 
+Local dev uses Docker (hot reload via bind mount):
+
 ```bash
-deno task dev     # serves config.example.yaml, hot-reloads
-deno task start   # production: reads config.yaml
-deno --version    # requires Deno 2.x
+docker compose -f docker-compose.dev.yml up --build   # serves config.example.yaml, hot-reloads
 ```
+
+For a bare Deno run (requires Deno 2.x locally): `deno task dev` (config.example.yaml)
+or `deno task start` (reads ./config/config.yaml).
 
 ## Config
 
@@ -42,11 +45,24 @@ deno --version    # requires Deno 2.x
 
 ## Docker
 
-Multi-stage `Dockerfile` builds a standalone binary via `deno compile` and runs
-it on `denoland/deno:debian-2.9.2`.
+### Production image
+Multi-stage `Dockerfile`: the `denoland/deno:debian-2.9.2` stage compiles a
+standalone binary via `deno compile`; the runtime stage is `debian:13-slim`.
+A minimal default config is baked at `/app/config/config.yaml`.
+
+CI (`.github/workflows/docker.yml`) builds and pushes the image to GitHub
+Container Registry (`ghcr.io/<owner>/<repo>:latest`) on every push to `main`.
+The published package defaults to **private** — set it public in the repo's
+Packages settings if you want others to pull.
+
+`docker-compose.yml` is production-only.
+
+### Dev environment
+`Dockerfile.dev` runs the source directly with `deno run --watch` (no compile).
+`docker-compose.dev.yml` bind-mounts the repo and serves `config.example.yaml`
+by default. Lift it with:
 
 ```bash
-docker compose build --no-cache
-docker compose up
-# mount your config dir: ./config:/app/config  (reads /app/config/config.yaml)
+docker compose -f docker-compose.dev.yml up --build
 ```
+
