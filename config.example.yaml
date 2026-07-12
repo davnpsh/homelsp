@@ -1,0 +1,126 @@
+title: My Homelab
+categories:
+  - name: Media
+    services:
+      - name: Plex
+        url: https://app.plex.tv
+        icon: plex
+        description: Media server
+      - name: Sonarr
+        url: https://sonarr.tv
+        icon: sonarr
+        description: TV series manager
+      - name: Radarr
+        url: https://radarr.video
+        icon: radarr
+        description: Movie manager
+      - name: Jellyfin
+        url: https://jellyfin.org
+        icon: jellyfin
+        description: Open-source media server
+      - name: Navidrome
+        url: https://www.navidrome.org
+        icon: ""
+        description: Music server
+  - name: Networking
+    services:
+      - name: AdGuard Home
+        url: https://adguard.com
+        icon: adguard
+        description: DNS ad blocker
+      - name: Tailscale
+        url: https://tailscale.com
+        icon: tailscale
+        description: VPN mesh
+      - name: Pi-hole
+        url: https://pi-hole.net
+        icon: pihole
+        description: Network-wide blocker
+      - name: Nginx Proxy Manager
+        url: https://nginxproxymanager.com
+        icon: nginx
+        description: Reverse proxy UI
+  - name: Home
+    services:
+      - name: Home Assistant
+        url: https://www.home-assistant.io
+        icon: homeassistant
+        description: Home automation
+      - name: Node-RED
+        url: https://nodered.org
+        icon: nodered
+        description: Flow automation
+      - name: ESPHome
+        url: https://esphome.io
+        icon: esphome
+        description: ESP firmware
+  - name: Dev Tools
+    services:
+      - name: Gitea
+        url: https://gitea.io
+        icon: gitea
+        description: Git hosting
+      - name: Portainer
+        url: https://www.portainer.io
+        icon: portainer
+        description: Container manager
+      - name: Vaultwarden
+        url: https://github.com/dani-garcia/vaultwarden
+        icon: bitwarden
+        description: Password manager
+  - name: Monitoring
+    services:
+      - name: Grafana
+        url: https://grafana.com
+        icon: grafana
+        description: Dashboards
+      - name: Prometheus
+        url: https://prometheus.io
+        icon: prometheus
+        description: Metrics
+      - name: Uptime Kuma
+        url: https://uptime.kuma.pet
+        icon: ""
+        description: Uptime monitor
+  - name: Storage
+    services:
+      - name: Nextcloud
+        url: https://nextcloud.com
+        icon: nextcloud
+        description: File sync
+      - name: Immich
+        url: https://immich.app
+        icon: immich
+        description: Photo backup
+      - name: Syncthing
+        url: https://syncthing.net
+        icon: syncthing
+        description: File sync
+  - name: Productivity
+    services:
+      - name: Paperless-ngx
+        url: https://paperless-ngx.com
+        icon: ""
+        description: Document archive
+      - name: BookStack
+        url: https://www.bookstackapp.com
+        icon: bookstack
+        description: Wiki
+      - name: FreshRSS
+        url: https://freshrss.org
+        icon: ""
+        description: RSS reader
+  - name: Security
+    services:
+      - name: Authelia
+        url: https://www.authelia.com
+        icon: authelia
+        description: Auth portal
+      - name: CrowdSec
+        url: https://www.crowdsec.net
+        icon: crowdsec
+        description: Threat defense
+      - name: WireGuard
+        url: https://www.wireguard.com
+        icon: wireguard
+        description: VPN tunnel

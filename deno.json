@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "dev": "CONFIG_PATH=config.example.yaml deno run --watch --allow-net --allow-read --allow-env main.ts",
+    "compile": "deno compile --allow-net --allow-read --allow-env --output ./dashboard main.ts"
+  },
+  "imports": {
+    "@oak/oak": "jsr:@oak/oak@^17.1.3",
+    "@std/yaml": "jsr:@std/yaml@^1.0.5"
+  }
+}
