@@ -4,9 +4,7 @@ HomeL(ab)S(tart)P(age) is a simple dashboard for my HomeLab. Built with the DASH
 Except this application does not use SQLite.
 
 > [!CAUTION]  
-> This application was built entirely using generative AI. This is due to the low complexity of the request
-and because no other tool out there fits my specific needs. This is meant as an experiment and for personal
-use.
+> This application was built entirely using generative AI. This is due to my limited familiarity with web development, the low complexity of the request, my laziness and because no other tool out there fits my specific needs. This is meant as an experiment and for personal use.
 
 ## Deploy
 
